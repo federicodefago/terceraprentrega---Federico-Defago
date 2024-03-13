@@ -1,0 +1,25 @@
+{% extends "Aplicacion1/index.html" %}
+
+{% block titulo %}
+<h1 class="display-5 fw-bold">Talentos</h1>
+<p class="fs-4">Todas las epicas acciones de nuestros heroes.</p>
+{% endblock titulo %}
+
+{% block contenido %}
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+      </tr>
+  </thead>
+  <tbody>
+  {% for c in Talentos %}
+    <tr>
+      <td>{{ c.id }}</td>
+      <td>{{ c.nombre }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock contenido %}

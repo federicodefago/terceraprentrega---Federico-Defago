@@ -1,0 +1,29 @@
+{% extends "Aplicacion1/index.html" %}
+
+{% block titulo %}
+<h1 class="display-5 fw-bold">Jugadores</h1>
+<p class="fs-4">Aqui se reunen todos nuestros amigos.</p>
+{% endblock titulo %}
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in jugadores %}
+      <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.apellido }}</td>
+        <td>{{ c.email }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
